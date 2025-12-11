@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysian Folktales</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Georgia, serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #0d0d0d;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #8b4513;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: #d4a574;
+      margin-bottom: 1rem;
+    }
+    
+    nav {
+      margin-top: 1rem;
+    }
+    
+    nav a {
+      color: #d4a574;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Audio control button */
+    #audioControl {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #d4a574;
+      color: #0d0d0d;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+    
+    #audioControl:hover {
+      background: #c49564;
+    }
+    
+    .story {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #262626;
+      border-radius: 10px;
+      border: 1px solid #3d3d3d;
+    }
+    
+    .story h2 {
+      color: #d4a574;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin-bottom: 2rem;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    
+    .story-text {
+      font-size: 1.1rem;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+    
+    .moral {
+      font-style: italic;
+      color: #d4a574;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #1a1a1a;
+      border-left: 4px solid #8b4513;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      border-top: 1px solid #3d3d3d;
+      margin-top: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      
+      .story {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      
+      #audioControl {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background audio -->
+  <audio id="bgAudio" loop>
+    <source src="layangbunian.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Audio control button -->
+  <button id="audioControl" onclick="toggleAudio()">🔊 Sound ON</button>
+
+  <header>
+    <h1>Malaysian Folktales</h1>
+    <p>Ancient stories passed through generations</p>
+    <nav>
+      <a href="#tanggang">Si Tanggang</a>
+      <a href="#batu">Batu Belah</a>
+      <a href="#bawang">Bawang Merah Bawang Putih</a>
+      <a href="#mahsuri">Mahsuri</a>
+    </nav>
+  </header>
+
+  <!-- Story 1 -->
+  <section class="story" id="tanggang">
+    <h2>Si Tanggang</h2>
+    
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="sitanggang.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="story-text">
+      <p>A poor widow raised her son, Si Tanggang, with great love and sacrifice. Despite their poverty, she gave him everything she could. When Tanggang grew up, he left to seek his fortune at sea and eventually became a wealthy merchant.</p>
+      
+      <p>Years later, his grand ship returned to his home village. His elderly mother, recognizing her son, approached the vessel with joy. But Tanggang, now dressed in fine clothes and surrounded by his wealthy wife and crew, denied knowing this poor, ragged woman. He was ashamed of her poverty and refused to acknowledge her as his mother.</p>
+      
+      <p>Heartbroken and humiliated, his mother raised her hands to the sky and cursed him: "If you are truly my son who has forgotten his mother, may you and your ship turn to stone!"</p>
+      
+      <p>Instantly, Tanggang, his ship, and his crew were transformed into stone, frozen forever as punishment for his ingratitude and shame.</p>
+    </div>
+    
+    <div class="moral">
+      <strong>Moral:</strong> Never forget those who sacrificed for you. Ingratitude and shame towards one's parents brings terrible consequences.
+    </div>
+  </section>
+
+  <!-- Story 2 -->
+  <section class="story" id="batu">
+    <h2>Batu Belah Batu Bertangkup</h2>
+    
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="batubelah.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="story-text">
+      <p>A widowed mother worked tirelessly to care for her two children, but they were ungrateful and neglectful. One day, she prepared a special dish using fish eggs (ikan tembakul) that she had been craving. While she was away, her children returned home hungry and carelessly ate all the food, including their mother's portion of the prized fish eggs.</p>
+      
+      <p>When the mother returned and discovered what they had done, her heart broke—not from hunger, but from their thoughtlessness and lack of care for her. Overcome with grief and anger, she wandered into the forest.</p>
+      
+      <p>There, she encountered a massive rock called Batu Belah Batu Bertangkup—the splitting and closing rock. The rock began to sing, and the mother, consumed by sorrow, walked toward it. The rock slowly opened its enormous mouth.</p>
+      
+      <p>The children, realizing their mistake too late, rushed after their mother, calling and begging her to return. But she continued forward, and the rock swallowed her completely before closing shut forever, leaving the children orphaned and filled with regret.</p>
+    </div>
+    
+    <div class="moral">
+      <strong>Moral:</strong> Take care of those who sacrifice for you. Negligence and taking parents for granted can lead to irreversible loss.
+    </div>
+  </section>
+
+  <!-- Story 3 -->
+  <section class="story" id="bawang">
+    <h2>Bawang Putih Bawang Merah</h2>
+    
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="bawangmerahbawangputih.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="story-text">
+      <p>After Bawang Putih's kind mother died, her father remarried a cruel woman who brought her own daughter, Bawang Merah. When her father also passed away, Bawang Putih was treated as a servant, forced to do all the housework while her stepsister was pampered.</p>
+      
+      <p>One day, while washing clothes by the river, Bawang Putih met a beautiful golden fish. The fish spoke to her with a familiar, loving voice—it was her mother's spirit, reincarnated to watch over her. Every day, Bawang Putih would visit the fish, sharing her sorrows, and the fish would comfort her and give her advice.</p>
+      
+      <p>The stepmother discovered this secret friendship and became jealous of any kindness shown to Bawang Putih. One day, she caught the golden fish, killed it, and cooked it into a meal. Worst of all, she forced Bawang Putih to eat it, not telling her what it was until after she had finished.</p>
+      
+      <p>Devastated and heartbroken, Bawang Putih wept by the river. But her mother's spirit appeared to her in a dream, telling her to bury the fish bones in the garden. When Bawang Putih did so, a magical tree grew overnight, bearing golden fruit and beautiful clothes.</p>
+      
+      <p>A prince passing by saw Bawang Putih in the fine clothes from the tree and fell in love with her kindness and beauty. They married, and Bawang Putih finally found happiness. Meanwhile, the stepmother and Bawang Merah, consumed by jealousy and greed, tried to replicate her fortune but failed, remaining bitter and poor for the rest of their lives.</p>
+    </div>
+    
+    <div class="moral">
+      <strong>Moral:</strong> A mother's love transcends even death. Kindness and patience will be rewarded, while cruelty only brings emptiness. Evil cannot destroy goodness permanently.
+    </div>
+  </section>
+
+  <!-- Story 4 -->
+  <section class="story" id="mahsuri">
+    <h2>Mahsuri W.I.P</h2>
+    
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="mahsuri.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="story-text">
+      <p>Mahsuri was a beautiful young woman who lived in Langkawi with her husband, a warrior named Wan Darus. While he was away defending the island from Siamese invaders, Mahsuri befriended a young traveling poet named Deraman who taught her songs and stories.</p>
+      
+      <p>Jealous villagers, particularly the wife of the village chief who envied Mahsuri's beauty, spread false rumors that she was having an affair with the poet. Despite Mahsuri's protests of innocence, she was accused of adultery—a crime punishable by death.</p>
+      
+      <p>The village chief ordered her execution. Mahsuri was bound to a tree and stabbed with a keris (ceremonial dagger). As the blade pierced her, white blood flowed from her wounds—a sign of her innocence and purity in Malay tradition.</p>
+      
+      <p>With her dying breath, Mahsuri cursed Langkawi: "For this injustice, Langkawi will not prosper for seven generations!" Shortly after, the island fell to Siamese invaders, and misfortune plagued Langkawi for centuries.</p>
+      
+      <p>According to legend, the curse was lifted in the late 20th century—seven generations later—when Langkawi began to prosper as a tourist destination. Mahsuri's tomb remains a significant site on the island, visited by those who honor her memory and tragic story.</p>
+    </div>
+    
+    <div class="moral">
+      <strong>Moral:</strong> False accusations and mob justice destroy innocent lives. Truth will ultimately be revealed, but not without consequences for those who commit injustice.
+    </div>
+  </section>
+
+  <script>
+    const audio = document.getElementById('bgAudio');
+    const button = document.getElementById('audioControl');
+    let isPlaying = false;
+
+    function toggleAudio() {
+      if (isPlaying) {
+        audio.pause();
+        button.textContent = '🔇 Sound OFF';
+        isPlaying = false;
+      } else {
+        audio.play();
+        button.textContent = '🔊 Sound ON';
+        isPlaying = true;
+      }
+    }
+
+    // Try to autoplay on page load (may be blocked by browser)
+    window.addEventListener('load', function() {
+      audio.play().then(() => {
+        button.textContent = '🔊 Sound ON';
+        isPlaying = true;
+      }).catch(() => {
+        // Autoplay blocked, user must click button
+        button.textContent = '🔇 Sound OFF (Click to enable)';
+      });
+    });
+  </script>
+
+</body>
+</html>
